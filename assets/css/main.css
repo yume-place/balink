@@ -9,6 +9,7 @@ body {
   border-radius: 100%;
   border: solid 1px #ffffff26;
   background: #100E14;
+  cursor: pointer;
 }
 
 .flag {

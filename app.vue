@@ -42,9 +42,7 @@
     <header v-for="(profileGroup) in profileme" :key="profileGroup" class="flex flex-col col-span-2 lg:flex-row"> <!-- 프로필 그룹((좌)프로필 정보, (우)자기소개, 관심사, 등) -->
       <div class="flex flex-col w-full"> <!-- 프로필과 언어별 표시이름이 있는 곳 -->
         <section class="flex items-center gap-4"> <!-- 프로필 정보 -->
-          <button @click="isModalOpen = true">
-            <img class="avatar" :src="profileGroup.avatar" alt="Avatar"/>
-          </button>
+            <img @click="isModalOpen = true" class="avatar" :src="profileGroup.avatar" alt="Avatar"/>
           <div class="flex flex-col pb-1 gap-0.5"> <!-- 프로필 정보 내부 -->
             <div class="flex items-center gap-2">
               <h2>{{ profileGroup.displayname }}</h2>
@@ -108,7 +106,7 @@
         </ul>
         <section>
           <h4 class="group-h4">{{ userContent.playlistsSectionTitle }}</h4>
-          <ul class="grid grid-cols-6 gap-2 w-full mt-2">
+          <ul class="grid grid-cols-3 md:grid-cols-6 gap-2 w-full mt-2">
             <li v-for="(playlist, i) in userContent.playlists.slice(0)" :key="i" class="col-span hover:opacity-80">
               <a :href="playlist.url" target="_blank" rel="noopener noreferrer">
                 <div class="flex flex-col">

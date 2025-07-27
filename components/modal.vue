@@ -1,9 +1,9 @@
-<script>
-  export default {
+<script setup>
+  import { profileme } from '@/assets/info/my-profile.ts'
+  const props = defineProps({
     name: "modal",
     emits: ["close"],
-  }
-  import { profileme } from '@/assets/info/my-profile.ts'
+  })
 </script>
 
 <template>
@@ -17,10 +17,10 @@
               <Icon name="mingcute:close-line" size="24" style="color: #E4E3ED" />
             </div>
           </header>
-          <img class="big-avatar-image" src="/d80eac4321e1b29abfbef07fa38d660c-removebg-preview.png" alt="Avatar Image" />
-          <footer v-for="(profile) in profileme" :key="profile" class="flex gap-1 pt-5 items-center place-content-center">
+          <img class="big-avatar-image" :src="profileme.avatar" />
+          <footer class="flex gap-1 pt-5 items-center place-content-center">
             <p>출처:</p>
-            <a>{{ profile.avtrsource }}</a>
+            <a>{{ profileme.avtrsource }}</a>
           </footer>
         </div>
       </div>
