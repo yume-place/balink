@@ -2,11 +2,11 @@ export const profileme = [
   {
     displayname: '바보리보',
     username: 'baboribo',
-    MeInOneWord: '바보같아!', //일단 뭐든지 질투하는 사람.
+    MeInOneWord: '바보.',
     avatar: 'https://tr.rbxcdn.com/30DAY-AvatarHeadshot-FB74C3A9326C43A7CC6727197602139E-Png/150/150/AvatarHeadshot/Webp/noFilter',
     avtrsource: '알 수 없음',
     avtrsourceurl: '',
-    about: '안녕하세요! 저는 바보리보라고 해요. 앞 날이 걱정됩니다..!',
+    about: '안녕하세요! 저는 바보리보라고 해요.',
     interests: [
       {
         name: '음악',
