@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
     '@nuxt/eslint',
+    '@nuxthub/core',
   ],
   css: ['~/assets/css/font.css', '~/assets/css/main.css'],
 })
