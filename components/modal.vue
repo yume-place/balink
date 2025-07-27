@@ -3,7 +3,7 @@
     name: "modal",
     emits: ["close"],
   }
-  import { profileme } from '../assets/info/my-profile.ts'
+  import { profileme } from '@/assets/info/my-profile.ts'
 </script>
 
 <template>
