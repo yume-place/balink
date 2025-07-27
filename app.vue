@@ -1,12 +1,12 @@
 <script setup>
   useSeoMeta({
-    title: '바보리보 (@baboribo)',
+    title: profileme[0].displayname + '의 페이지',
     description: '...',
-    ogTitle: '바보리보',
+    ogTitle: profileme[0].displayname,
     ogDescription: '...',
-    ogUrl: 'https://baboribo.yume.place',
+    ogUrl: 'https://babo.yume.place',
     ogImage: 'https://avatars.githubusercontent.com/u/71020988?v=4',
-    twitterTitle: '바보리보',
+    twitterTitle: profileme[0].displayname,
     twitterDescription: '...',
     twitterCard: 'summary',
     twitterImage: 'https://avatars.githubusercontent.com/u/71020988?v=4'
@@ -20,7 +20,7 @@
       {
         rel: 'icon',
         type: 'image/png',
-        href: '/d80eac4321e1b29abfbef07fa38d660c-removebg-preview.png'
+        href: profileme[0].avatar
       }
     ]
   })
@@ -32,7 +32,7 @@
   import { langname } from './assets/info/langname.ts'
   import { userContent } from './assets/info/links.ts'
   import { footerlinks } from './assets/info/footerlinks'
-  import modal from './components/modal.vue'
+  import modal from './components/avatarmodal.vue'
 
   const isModalOpen = ref(false)
 </script>
@@ -89,8 +89,8 @@
     <section>
       <h3 class="group-h3">링크</h3>
       <section>
-        <h4 class="group-h4">{{ userContent.linksSectionTitle }}</h4>
-        <ul class="flex flex-col gap-2 w-full mt-2">
+        <h4>{{ userContent.linksSectionTitle }}</h4>
+        <ul class="flex flex-col gap-2 w-full mt-1 mb-5">
           <li v-for="(link, i) in userContent.links.slice(0)" :key="i">
             <a class="link-card-ui" :href="link.url" target="_blank" rel="noopener noreferrer">
               <div class="link-card-content">
@@ -105,7 +105,7 @@
           </li>
         </ul>
         <section>
-          <h4 class="group-h4">{{ userContent.playlistsSectionTitle }}</h4>
+          <h4>{{ userContent.playlistsSectionTitle }}</h4>
           <ul class="grid grid-cols-3 md:grid-cols-6 gap-2 w-full mt-2">
             <li v-for="(playlist, i) in userContent.playlists.slice(0)" :key="i" class="col-span hover:opacity-80">
               <a :href="playlist.url" target="_blank" rel="noopener noreferrer">
