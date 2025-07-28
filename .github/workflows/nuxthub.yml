@@ -5,6 +5,8 @@ jobs:
   deploy:
     name: "Deploy to NuxtHub"
     runs-on: ubuntu-latest
+    env:
+      NUXT_HUB_PROJECT_KEY: ${{ secrets.NUXT_HUB_PROJECT_KEY }}
     permissions:
       contents: read
       id-token: write
@@ -30,4 +32,8 @@ jobs:
       - name: Build & Deploy to NuxtHub
         uses: nuxt-hub/action@v2
         with:
-          project-key: babbor1b0-f030
+        nightly
+          project-key: ${{ secrets.NUXT_HUB_PROJECT_KEY }}
+          
+        main
+          project-key: ${{ secrets.NUXT_HUB_PROJECT_KEY }}
