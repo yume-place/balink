@@ -8,6 +8,8 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    env:
+      NUXT_HUB_PROJECT_KEY: ${{ secrets.NUXT_HUB_PROJECT_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -26,8 +28,14 @@ jobs:
 
       - name: Ensure NuxtHub module is installed
         run: npx nuxthub@latest ensure
+        
+      - name: Load .env
+        run: |
+          set -a
+          source .env
+          set +a
 
       - name: Build & Deploy to NuxtHub
         uses: nuxt-hub/action@v2
         with:
-          project-key: ${NUXT_HUB_PROJECT_KEY}
+          project-key: ${{ env.NUXT_HUB_PROJECT_KEY }}
