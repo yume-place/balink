@@ -30,4 +30,4 @@ jobs:
       - name: Build & Deploy to NuxtHub
         uses: nuxt-hub/action@v2
         with:
-          project-key: babosite-8s0a
+          project-key: ${NUXT_HUB_PROJECT_KEY}

@@ -4,7 +4,7 @@ export const profileme = [
     username: 'baboribo',
     MeInOneWord: '...',
     avatar: 'f86467f958e9cd734321ec7d4c359741.png',
-    avtrsource: '킬 미 베이비 (만화 장면 중에서)',
+    avtrsource: '킬 미 베이비 (アル에서)',
     avtrsourceurl: 'https://alu.jp/series/%E3%82%AD%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%99%E3%82%A4%E3%83%99%E3%83%BC/crop/2k6snisIMy3tnLbqWdKh',
     about: '안녕하세요, 저는 바보리보입니다.',
     interests: [
