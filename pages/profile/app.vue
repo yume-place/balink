@@ -28,11 +28,11 @@
   import { ref } from 'vue'
   import './assets/css/main.css'
   import './assets/css/font.css'
-  import { profileme } from './assets/info/my-profile.ts'
-  import { langname } from './assets/info/langname.ts'
-  import { userContent } from './assets/info/links.ts'
-  import { footerlinks } from './assets/info/footerlinks'
-  import modal from './components/avatarmodal.vue'
+  import { profileme } from '../../assets/info/my-profile.ts'
+  import { langname } from '../../assets/info/langname.ts'
+  import { userContent } from '../../assets/info/links.ts'
+  import { footerlinks } from '../../assets/info/footerlinks'
+  import modal from '../../components/avatarmodal.vue'
 
   const isModalOpen = ref(false)
 </script>
