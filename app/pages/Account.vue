@@ -18,7 +18,7 @@ const { data } = await supabase
 if (data) {
   username.value = data.username
   website.value = data.website
-  avatar_path.value = data.avatar_url
+  avatar_path.value = data.avatar
 }
 
 loading.value = false
@@ -30,9 +30,13 @@ async function updateProfile() {
 
     const updates = {
       id: user.value.id,
+      displayname: displayname.value,
       username: username.value,
       website: website.value,
-      avatar_url: avatar_path.value,
+      avatar: avatar_path.value,
+      avatar_source: avatar_source.value,
+      avatar_sourceurl: avatar_sourceurl.value,
+      about: '',
       updated_at: new Date(),
     }
 

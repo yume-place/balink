@@ -1,6 +1,3 @@
-import Account from "~/pages/Account.vue";
-import Profile from "~/pages/profile.vue";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -25,7 +22,7 @@ export default defineNuxtConfig({
       saveRedirectToCookie: false,
     },
     url: process.env.SUPABASE_URL,
-    key: process.env.SUPABASE_ANON_KEY,
+    key: process.env.SUPABASE_KEY,
   },
   css: ['~/assets/css/font.css', '~/assets/css/main.css'],
 })
